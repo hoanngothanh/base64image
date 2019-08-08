@@ -19,7 +19,7 @@ internal class Encoder(private val bitmap: Bitmap, private val listener: Listene
 
         var base64: String? = null
         val stream = ByteArrayOutputStream()
-        bitmap.compress(Bitmap.CompressFormat.PNG, 100, stream)
+        bitmap.compress(Bitmap.CompressFormat.JPEG, 100, stream)
         val bytes = stream.toByteArray()
 
         try {
